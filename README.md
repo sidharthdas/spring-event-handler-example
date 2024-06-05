@@ -13,7 +13,7 @@ public class DischargeService {
     }
 }
 
-Limitation of above design : 
+Limitations of the above design : 
 
 Tight Coupling
 Difficult to Extend
@@ -21,13 +21,16 @@ Testing and Maintenance
 Lack of Asynchronous Processing
 
 ```
+## Design: 
+![Uploading image.png…]()
+
 
 ## Steps to create:
 
-1. Create events extends with ApplicationEvent
+1. Create events extended with ApplicationEvent
 2. Create respective handler and add void method and annotate with @EventListener
-3. In service layer, autowired ``` ApplicationEventPublisher applicationEventPublisher; ```
+3. In the service layer, autowired ``` ApplicationEventPublisher applicationEventPublisher; ```
 4. Then publish the event using ``` applicationEventPublisher.publishEvent(new PatientDischargeEvent(this, patientName, patientNumber)); ```
 
-Note : By default, ``` applicationEventPublisher.publishEvent(new PatientDischargeEvent(this, patientName, patientNumber)); ```
-is synchronised in spring boot, to make it async, add @Async in all the event handler's method and @EnableAsync in SpringApplication class
+Note: By default, ``` applicationEventPublisher.publishEvent(new PatientDischargeEvent(this, patientName, patientNumber)); ```
+is synchronized in spring boot, to make it async, add @Async in all the event handler's methods and @EnableAsync in the SpringApplication class
