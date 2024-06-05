@@ -22,7 +22,8 @@ Lack of Asynchronous Processing
 
 ```
 ## Design: 
-![Uploading image.png…]()
+<img width="1075" alt="image" src="https://github.com/sidharthdas/spring-event-handler-example/assets/36167954/a3ee4466-9f9a-4ca4-a9b0-a7671c6925aa">
+
 
 
 ## Steps to create:
