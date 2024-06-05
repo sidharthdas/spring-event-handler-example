@@ -34,4 +34,4 @@ Lack of Asynchronous Processing
 4. Then publish the event using ``` applicationEventPublisher.publishEvent(new PatientDischargeEvent(this, patientName, patientNumber)); ```
 
 Note: By default, ``` applicationEventPublisher.publishEvent(new PatientDischargeEvent(this, patientName, patientNumber)); ```
-is synchronized in spring boot, to make it async, add @Async in all the event handler's methods and @EnableAsync in the SpringApplication class
+is synchronized in spring boot, to make it async, add ``` @Async ``` in all the event handler's methods and ``` @EnableAsync ``` in the SpringApplication class
