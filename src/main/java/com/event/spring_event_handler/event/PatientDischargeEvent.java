@@ -1,9 +1,8 @@
 package com.event.spring_event_handler.event;
 
-import lombok.Data;
 import org.springframework.context.ApplicationEvent;
 
-@Data
+
 public class PatientDischargeEvent extends ApplicationEvent {
 
         private String patientNumber;
@@ -12,5 +11,21 @@ public class PatientDischargeEvent extends ApplicationEvent {
         super(source);
         this.patientName = patientName;
         this.patientNumber = patientNumber;
+    }
+
+    public String getPatientNumber() {
+        return patientNumber;
+    }
+
+    public void setPatientNumber(String patientNumber) {
+        this.patientNumber = patientNumber;
+    }
+
+    public String getPatientName() {
+        return patientName;
+    }
+
+    public void setPatientName(String patientName) {
+        this.patientName = patientName;
     }
 }
