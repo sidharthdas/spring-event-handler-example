@@ -2,7 +2,6 @@
 
 ## Limitation of using legacy style
 
-
 ```
 
 public class DischargeService {
